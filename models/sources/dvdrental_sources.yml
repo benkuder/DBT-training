@@ -2,228 +2,211 @@ version: 2
 
 sources:
   - name: raw_dvdrental
-    description: ""
-    database: northwind
-    schema: raw_dvdrental
     tables:
-      - name: actor
-        description: ""
-        columns:
-          - name: actor_id
-            description: ""
-          - name: first_name
-            description: ""
-          - name: last_name
-            description: ""
-          - name: last_update
-            description: ""
-
-      - name: address
-        description: ""
-        columns:
-          - name: address_id
-            description: ""
-          - name: address
-            description: ""
-          - name: address2
-            description: ""
-          - name: district
-            description: ""
-          - name: city_id
-            description: ""
-          - name: postal_code
-            description: ""
-          - name: phone
-            description: ""
-          - name: last_update
-            description: ""
-
-      - name: category
-        description: ""
-        columns:
-          - name: category_id
-            description: ""
-          - name: name
-            description: ""
-          - name: last_update
-            description: ""
-
       - name: city
-        description: ""
         columns:
           - name: city_id
-            description: ""
+            data_type: number
           - name: city
-            description: ""
+            data_type: varchar
           - name: country_id
-            description: ""
+            data_type: number
           - name: last_update
-            description: ""
-
-      - name: country
-        description: ""
-        columns:
-          - name: country_id
-            description: ""
-          - name: country
-            description: ""
-          - name: last_update
-            description: ""
+            data_type: varchar
 
       - name: customer
-        description: ""
         columns:
           - name: customer_id
-            description: ""
+            data_type: number
           - name: store_id
-            description: ""
+            data_type: number
           - name: first_name
-            description: ""
+            data_type: varchar
           - name: last_name
-            description: ""
+            data_type: varchar
           - name: email
-            description: ""
+            data_type: varchar
           - name: address_id
-            description: ""
+            data_type: number
           - name: activebool
-            description: ""
+            data_type: boolean
           - name: create_date
-            description: ""
+            data_type: varchar
           - name: last_update
-            description: ""
+            data_type: varchar
           - name: active
-            description: ""
-
-      - name: film
-        description: ""
-        columns:
-          - name: film_id
-            description: ""
-          - name: title
-            description: ""
-          - name: description
-            description: ""
-          - name: release_year
-            description: ""
-          - name: language_id
-            description: ""
-          - name: rental_duration
-            description: ""
-          - name: rental_rate
-            description: ""
-          - name: length
-            description: ""
-          - name: replacement_cost
-            description: ""
-          - name: rating
-            description: ""
-          - name: last_update
-            description: ""
-          - name: special_features
-            description: ""
-          - name: fulltext
-            description: ""
-
-      - name: film_actor
-        description: ""
-        columns:
-          - name: actor_id
-            description: ""
-          - name: film_id
-            description: ""
-          - name: last_update
-            description: ""
+            data_type: number
 
       - name: film_category
-        description: ""
         columns:
           - name: film_id
-            description: ""
+            data_type: number
           - name: category_id
-            description: ""
+            data_type: number
           - name: last_update
-            description: ""
+            data_type: varchar
 
       - name: inventory
-        description: ""
         columns:
           - name: inventory_id
-            description: ""
+            data_type: number
           - name: film_id
-            description: ""
+            data_type: number
           - name: store_id
-            description: ""
+            data_type: number
           - name: last_update
-            description: ""
-
-      - name: payment
-        description: ""
-        columns:
-          - name: payment_id
-            description: ""
-          - name: customer_id
-            description: ""
-          - name: staff_id
-            description: ""
-          - name: rental_id
-            description: ""
-          - name: amount
-            description: ""
-          - name: payment_date
-            description: ""
+            data_type: varchar
 
       - name: rental
-        description: ""
         columns:
           - name: rental_id
-            description: ""
+            data_type: number
           - name: rental_date
-            description: ""
+            data_type: varchar
           - name: inventory_id
-            description: ""
+            data_type: number
           - name: customer_id
-            description: ""
+            data_type: number
           - name: return_date
-            description: ""
+            data_type: varchar
           - name: staff_id
-            description: ""
+            data_type: number
           - name: last_update
-            description: ""
+            data_type: varchar
 
-      - name: staff
-        description: ""
+      - name: address
         columns:
-          - name: staff_id
-            description: ""
-          - name: first_name
-            description: ""
-          - name: last_name
-            description: ""
           - name: address_id
-            description: ""
-          - name: email
-            description: ""
-          - name: store_id
-            description: ""
-          - name: active
-            description: ""
-          - name: username
-            description: ""
-          - name: password
-            description: ""
+            data_type: number
+          - name: address
+            data_type: varchar
+          - name: address2
+            data_type: varchar
+          - name: district
+            data_type: varchar
+          - name: city_id
+            data_type: number
+          - name: postal_code
+            data_type: number
+          - name: phone
+            data_type: number
           - name: last_update
-            description: ""
-          - name: picture
-            description: ""
+            data_type: varchar
+
+      - name: category
+        columns:
+          - name: category_id
+            data_type: number
+          - name: name
+            data_type: varchar
+          - name: last_update
+            data_type: varchar
+
+      - name: payment
+        columns:
+          - name: payment_id
+            data_type: number
+          - name: customer_id
+            data_type: number
+          - name: staff_id
+            data_type: number
+          - name: rental_id
+            data_type: number
+          - name: amount
+            data_type: number
+          - name: payment_date
+            data_type: varchar
+
+      - name: actor
+        columns:
+          - name: actor_id
+            data_type: number
+          - name: first_name
+            data_type: varchar
+          - name: last_name
+            data_type: varchar
+          - name: last_update
+            data_type: varchar
+
+      - name: country
+        columns:
+          - name: country_id
+            data_type: number
+          - name: country
+            data_type: varchar
+          - name: last_update
+            data_type: varchar
+
+      - name: film
+        columns:
+          - name: film_id
+            data_type: number
+          - name: title
+            data_type: varchar
+          - name: description
+            data_type: varchar
+          - name: release_year
+            data_type: number
+          - name: language_id
+            data_type: number
+          - name: rental_duration
+            data_type: number
+          - name: rental_rate
+            data_type: number
+          - name: length
+            data_type: number
+          - name: replacement_cost
+            data_type: number
+          - name: rating
+            data_type: varchar
+          - name: last_update
+            data_type: varchar
+          - name: special_features
+            data_type: varchar
+          - name: fulltext
+            data_type: varchar
+
+      - name: film_actor
+        columns:
+          - name: actor_id
+            data_type: number
+          - name: film_id
+            data_type: number
+          - name: last_update
+            data_type: varchar
 
       - name: store
-        description: ""
         columns:
           - name: store_id
-            description: ""
+            data_type: number
           - name: manager_staff_id
-            description: ""
+            data_type: number
           - name: address_id
-            description: ""
+            data_type: number
           - name: last_update
-            description: ""
+            data_type: varchar
+
+      - name: staff
+        columns:
+          - name: staff_id
+            data_type: varchar
+          - name: first_name
+            data_type: varchar
+          - name: last_name
+            data_type: varchar
+          - name: address_id
+            data_type: number
+          - name: email
+            data_type: varchar
+          - name: store_id
+            data_type: number
+          - name: active
+            data_type: boolean
+          - name: username
+            data_type: varchar
+          - name: password
+            data_type: varchar
+          - name: last_update
+            data_type: varchar
+          - name: picture
+            data_type: varchar

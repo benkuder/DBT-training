@@ -39,7 +39,8 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     example:
-      +materialized: view
-      example_subfolder:
+      +materialized: table
+    staging:
         +materialized: table
-
+    intermediate:
+        +materialized: table
